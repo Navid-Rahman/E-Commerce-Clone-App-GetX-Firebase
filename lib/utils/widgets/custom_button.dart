@@ -7,9 +7,7 @@ Widget customButton({
   String? title,
 }) {
   return ElevatedButton(
-    onPressed: () {
-      onPressed();
-    },
+    onPressed: onPressed,
     style: ElevatedButton.styleFrom(
       backgroundColor: color,
       padding: const EdgeInsets.all(12),

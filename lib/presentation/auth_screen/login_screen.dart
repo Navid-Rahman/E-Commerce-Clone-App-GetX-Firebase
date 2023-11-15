@@ -1,9 +1,11 @@
 import 'package:daraz_idea_firebase/constants/consts.dart';
 import 'package:daraz_idea_firebase/constants/lists.dart';
+import 'package:daraz_idea_firebase/presentation/auth_screen/signup_screen.dart';
 import 'package:daraz_idea_firebase/utils/widgets/app_logo_widget.dart';
 import 'package:daraz_idea_firebase/utils/widgets/bg_widget.dart';
 import 'package:daraz_idea_firebase/utils/widgets/custom_button.dart';
 import 'package:daraz_idea_firebase/utils/widgets/custom_textfields.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -49,7 +51,9 @@ class LoginScreen extends StatelessWidget {
                   createNewAccount.text.color(fontGrey).make(),
                   5.heightBox,
                   customButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const SignUpScreen());
+                    },
                     title: signUp,
                     color: lightGolden,
                     textColor: redColor,
