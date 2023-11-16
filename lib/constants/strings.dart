@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 const appname = "eMart";
 const appversion = "Version 1.0.0";
 const credits = "Developed by Navid Rahman";
@@ -20,3 +22,9 @@ const createNewAccount = "Or, Create a New Account";
 const privacyPolicy = "Privacy Policy";
 const termsAndCondition = "Terms & Conditions";
 const alreadyHaveAnAccount = "Already have an account? ";
+
+/// Home page Strings
+const home = "Home";
+const categories = "Categories";
+const cart = "Cart";
+const account = "Account";

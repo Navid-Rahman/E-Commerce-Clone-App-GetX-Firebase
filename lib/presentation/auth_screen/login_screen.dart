@@ -1,6 +1,7 @@
 import 'package:daraz_idea_firebase/constants/consts.dart';
 import 'package:daraz_idea_firebase/constants/lists.dart';
 import 'package:daraz_idea_firebase/presentation/auth_screen/signup_screen.dart';
+import 'package:daraz_idea_firebase/presentation/home_screen/home_screen.dart';
 import 'package:daraz_idea_firebase/utils/widgets/app_logo_widget.dart';
 import 'package:daraz_idea_firebase/utils/widgets/bg_widget.dart';
 import 'package:daraz_idea_firebase/utils/widgets/custom_button.dart';
@@ -42,7 +43,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   5.heightBox,
                   customButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const HomeScreen());
+                    },
                     title: logIn,
                     color: redColor,
                     textColor: whiteColor,
