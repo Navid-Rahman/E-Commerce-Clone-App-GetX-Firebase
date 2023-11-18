@@ -169,7 +169,94 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                 )).toList(),
                       ),
-                    )
+                    ),
+
+                    /// Featured Products
+                    20.heightBox,
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      width: context.screenWidth,
+                      decoration: BoxDecoration(
+                        color: redColor,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          featuredProducts.text.white
+                              .size(18)
+                              .fontFamily(bold)
+                              .make(),
+                          10.heightBox,
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: List.generate(
+                                  6,
+                                  (index) => Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Image.asset(
+                                            imgP1,
+                                            width: 150,
+                                            fit: BoxFit.cover,
+                                          ),
+                                          10.heightBox,
+                                          "Lenovo Ideapad 320"
+                                              .text
+                                              .color(darkFontGrey)
+                                              .fontFamily(semibold)
+                                              .make(),
+                                          10.heightBox,
+                                          "Rs. 50,000"
+                                              .text
+                                              .color(redColor)
+                                              .fontFamily(semibold)
+                                              .make(),
+                                        ],
+                                      )
+                                          .box
+                                          .margin(
+                                            const EdgeInsets.symmetric(
+                                                horizontal: 4),
+                                          )
+                                          .rounded
+                                          .white
+                                          .padding(const EdgeInsets.all(8))
+                                          .make()),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+
+                    /// Third Sliders
+                    20.heightBox,
+                    VxSwiper.builder(
+                      height: 150,
+                      aspectRatio: 16 / 9,
+                      enlargeCenterPage: true,
+                      autoPlay: true,
+                      itemCount: secondSlidersList.length,
+                      itemBuilder: (context, index) {
+                        return Image.asset(
+                          secondSlidersList[index],
+                          fit: BoxFit.fill,
+                        )
+                            .box
+                            .rounded
+                            .clip(Clip.antiAlias)
+                            .margin(
+                              const EdgeInsets.symmetric(
+                                horizontal: 12,
+                              ),
+                            )
+                            .make();
+                      },
+                    ),
+
+                    /// All Products Section
                   ],
                 ),
               ),
