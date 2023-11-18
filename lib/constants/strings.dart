@@ -44,3 +44,14 @@ const tShirt = "T-Shirt";
 const girlsDress = "Girls' Dresses";
 const featuredCategories = "Featured Categories";
 const featuredProducts = "Featured Products";
+
+/// Categories Screen Strings
+const womenClothing = "Women's Clothing";
+const menClothing = "Men's Clothing & Fashion";
+const computersAccessories = "Computers & Accessories";
+const jewelryWatches = "Jewelry & Watches";
+const automobiles = "Automobiles";
+const kidToys = "Kid's Toys";
+const sports = "Sports";
+const cellPhones = "Cell Phones";
+const furniture = "Furniture";
