@@ -257,6 +257,54 @@ class HomeScreen extends StatelessWidget {
                     ),
 
                     /// All Products Section
+                    20.heightBox,
+                    GridView.builder(
+                      shrinkWrap: true,
+                      itemCount: 6,
+                      physics: const NeverScrollableScrollPhysics(),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 8,
+                        mainAxisSpacing: 8,
+                        mainAxisExtent: 300,
+                      ),
+                      itemBuilder: (context, index) {
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              imgP5,
+                              height: 200,
+                              width: 200,
+                              fit: BoxFit.cover,
+                            ),
+                            const Spacer(),
+                            "Lenovo Ideapad 320"
+                                .text
+                                .color(darkFontGrey)
+                                .fontFamily(semibold)
+                                .make(),
+                            10.heightBox,
+                            "Rs. 50,000"
+                                .text
+                                .color(redColor)
+                                .fontFamily(semibold)
+                                .make(),
+                          ],
+                        )
+                            .box
+                            .white
+                            .rounded
+                            .margin(
+                              const EdgeInsets.symmetric(horizontal: 4),
+                            )
+                            .padding(
+                              const EdgeInsets.all(12),
+                            )
+                            .make();
+                      },
+                    ),
                   ],
                 ),
               ),
