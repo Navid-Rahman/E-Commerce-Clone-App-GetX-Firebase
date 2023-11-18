@@ -1,5 +1,8 @@
 import 'package:daraz_idea_firebase/constants/consts.dart';
 import 'package:daraz_idea_firebase/utils/widgets/bg_widget.dart';
+import 'package:get/get.dart';
+
+import 'items_details.dart';
 
 class CategoryDetails extends StatelessWidget {
   final String? title;
@@ -88,7 +91,14 @@ class CategoryDetails extends StatelessWidget {
                         .padding(
                           const EdgeInsets.all(12),
                         )
-                        .make();
+                        .make()
+                        .onTap(() {
+                      Get.to(
+                        () => ItemDetails(
+                          title: "Lenovo Ideapad 320",
+                        ),
+                      );
+                    });
                   },
                 ),
               ),
