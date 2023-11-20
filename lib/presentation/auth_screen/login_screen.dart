@@ -8,8 +8,6 @@ import 'package:daraz_idea_firebase/utils/widgets/custom_button.dart';
 import 'package:daraz_idea_firebase/utils/widgets/custom_textfields.dart';
 import 'package:get/get.dart';
 
-import '../home_screen/home_screen.dart';
-
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
