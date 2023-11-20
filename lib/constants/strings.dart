@@ -55,3 +55,11 @@ const kidToys = "Kid's Toys";
 const sports = "Sports";
 const cellPhones = "Cell Phones";
 const furniture = "Furniture";
+
+/// Item Details Screen Strings
+const video = "Video";
+const reviews = "Reviews";
+const sellerPolicy = "Seller Policy";
+const returnPolicy = "Return Policy";
+const supportPolicy = "Support Policy";
+const productsYouMayAlsoLike = "Products You May Also Like";

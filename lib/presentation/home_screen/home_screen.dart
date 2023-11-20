@@ -226,7 +226,7 @@ class HomeScreen extends StatelessWidget {
                                           .padding(const EdgeInsets.all(8))
                                           .make()),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),

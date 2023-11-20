@@ -1,4 +1,5 @@
 import 'package:daraz_idea_firebase/constants/consts.dart';
+import 'package:daraz_idea_firebase/constants/lists.dart';
 import 'package:daraz_idea_firebase/utils/widgets/custom_button.dart';
 
 class ItemDetails extends StatelessWidget {
@@ -200,10 +201,94 @@ class ItemDetails extends StatelessWidget {
                                 .make(),
                           ],
                         ).box.padding(const EdgeInsets.all(8)).make(),
-
-                        //////////////////////////////////////////////
                       ],
                     ).box.white.shadowSm.make(),
+
+                    /// Description Section
+                    10.heightBox,
+                    "Description:"
+                        .text
+                        .size(18)
+                        .fontFamily(semibold)
+                        .color(darkFontGrey)
+                        .make(),
+
+                    10.heightBox,
+                    "This is a dummy item and a dummy description for the .... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                        .text
+                        .fontFamily(semibold)
+                        .color(darkFontGrey)
+                        .make(),
+
+                    10.heightBox,
+
+                    /// Buttons Section
+                    ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      children: List.generate(
+                        itemDetailsButtonLists.length,
+                        (index) => ListTile(
+                          title: itemDetailsButtonLists[index]
+                              .text
+                              .fontFamily(semibold)
+                              .color(darkFontGrey)
+                              .make(),
+                          trailing: const Icon(Icons.arrow_forward),
+                          onTap: () {},
+                        ),
+                      ),
+                    ),
+
+                    /// Similar Items Section
+                    20.heightBox,
+
+                    productsYouMayAlsoLike.text
+                        .fontFamily(bold)
+                        .color(darkFontGrey)
+                        .size(16)
+                        .make(),
+
+                    10.heightBox,
+
+                    /// Similar Items List
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: List.generate(
+                            6,
+                            (index) => Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Image.asset(
+                                      imgP1,
+                                      width: 150,
+                                      fit: BoxFit.cover,
+                                    ),
+                                    10.heightBox,
+                                    "Lenovo Ideapad 320"
+                                        .text
+                                        .color(darkFontGrey)
+                                        .fontFamily(semibold)
+                                        .make(),
+                                    10.heightBox,
+                                    "Rs. 50,000"
+                                        .text
+                                        .color(redColor)
+                                        .fontFamily(semibold)
+                                        .make(),
+                                  ],
+                                )
+                                    .box
+                                    .margin(
+                                      const EdgeInsets.symmetric(horizontal: 4),
+                                    )
+                                    .rounded
+                                    .white
+                                    .padding(const EdgeInsets.all(8))
+                                    .make()),
+                      ),
+                    ),
                   ],
                 ),
               ),
