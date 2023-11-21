@@ -9,7 +9,11 @@ import 'package:daraz_idea_firebase/utils/widgets/custom_textfields.dart';
 import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
+
+  // Text Controllers
+  var emailController = TextEditingController();
+  var passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +36,16 @@ class LoginScreen extends StatelessWidget {
               20.heightBox,
               Column(
                 children: [
-                  customTextField(title: email, hint: emailHint),
-                  customTextField(title: password, hint: passwordHint),
+                  customTextField(
+                      title: email,
+                      hint: emailHint,
+                      controller: emailController,
+                      isPassword: false),
+                  customTextField(
+                      title: password,
+                      hint: passwordHint,
+                      controller: passwordController,
+                      isPassword: true),
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(

@@ -58,4 +58,15 @@ class AuthController extends GetxController {
       'photoUrl': '',
     });
   }
+
+  /// Logout Method
+  logoutMethod(
+    context,
+  ) async {
+    try {
+      await auth.signOut();
+    } catch (e) {
+      VxToast.show(context, msg: e.toString());
+    }
+  }
 }
