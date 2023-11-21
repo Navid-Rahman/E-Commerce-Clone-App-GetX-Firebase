@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "603940858949",
+    "project_id": "daraz-firebase-clone-app",
+    "storage_bucket": "daraz-firebase-clone-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603940858949:android:d3e5096a6902b9382f072c",
+        "android_client_info": {
+          "package_name": "com.example.daraz_idea_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcMM4g_JcnCZiSJATJytk-IO1T2-yb6Go"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

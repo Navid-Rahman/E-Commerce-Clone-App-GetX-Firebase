@@ -1,8 +1,13 @@
 import 'package:daraz_idea_firebase/constants/consts.dart';
 import 'package:daraz_idea_firebase/presentation/splash_screen/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 
-void main() => runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
