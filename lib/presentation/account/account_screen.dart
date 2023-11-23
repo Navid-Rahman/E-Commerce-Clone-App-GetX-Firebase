@@ -1,7 +1,11 @@
 import 'package:daraz_idea_firebase/constants/consts.dart';
 import 'package:daraz_idea_firebase/constants/lists.dart';
 import 'package:daraz_idea_firebase/presentation/account/widgets/details_card.dart';
+import 'package:daraz_idea_firebase/presentation/auth_screen/login_screen.dart';
 import 'package:daraz_idea_firebase/utils/widgets/bg_widget.dart';
+import 'package:get/get.dart';
+
+import '../../controllers/auth_controller.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
@@ -64,7 +68,10 @@ class AccountScreen extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () async {
+                        Get.put(AuthController()).logoutMethod(context);
+                        Get.offAll(LoginScreen());
+                      },
                       child: "Logout".text.white.fontFamily(semibold).make(),
                     ),
                   ],

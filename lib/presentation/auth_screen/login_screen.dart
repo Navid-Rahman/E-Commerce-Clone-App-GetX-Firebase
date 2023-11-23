@@ -8,15 +8,14 @@ import 'package:daraz_idea_firebase/utils/widgets/custom_button.dart';
 import 'package:daraz_idea_firebase/utils/widgets/custom_textfields.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+import '../../controllers/auth_controller.dart';
 
-  // Text Controllers
-  var emailController = TextEditingController();
-  var passwordController = TextEditingController();
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var controller = Get.put(AuthController());
     return bgWidget(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -39,12 +38,12 @@ class LoginScreen extends StatelessWidget {
                   customTextField(
                       title: email,
                       hint: emailHint,
-                      controller: emailController,
+                      controller: controller.emailController,
                       isPassword: false),
                   customTextField(
                       title: password,
                       hint: passwordHint,
-                      controller: passwordController,
+                      controller: controller.passwordController,
                       isPassword: true),
                   Align(
                     alignment: Alignment.centerRight,
@@ -55,8 +54,15 @@ class LoginScreen extends StatelessWidget {
                   ),
                   5.heightBox,
                   customButton(
-                    onPressed: () {
-                      Get.to(() => const Home());
+                    onPressed: () async {
+                      await controller
+                          .loginMethod(context: context)
+                          .then((value) {
+                        if (value != null) {
+                          VxToast.show(context, msg: loggedInSuccessfully);
+                          Get.offAll(() => const Home());
+                        }
+                      });
                     },
                     title: logIn,
                     color: redColor,
