@@ -75,15 +75,3 @@ const itemDetailsButtonLists = [
   returnPolicy,
   supportPolicy,
 ];
-
-const profileButtonLists = [
-  myOrders,
-  myWishlist,
-  messages,
-];
-
-const profileButtonIcons = [
-  icOrder,
-  icOrders,
-  icMessages,
-];
